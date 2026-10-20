@@ -52,10 +52,10 @@ uv run python main.py
 * **TN:** $y_i = 0$ та $s_i < t$
 
 Вартість помилок:
-$$ C(t) = 10 \cdot FN(t) + FP(t) $$
+$$C(t) = 10 \cdot FN(t) + FP(t)$$
 
 Метрики:
-$$ Precision = \frac{TP}{TP + FP}, \quad Recall = TPR = \frac{TP}{TP + FN}, \quad FPR = \frac{FP}{FP + TN} $$
+$$Precision = \frac{TP}{TP + FP}, \quad Recall = TPR = \frac{TP}{TP + FN}, \quad FPR = \frac{FP}{FP + TN}$$
 
 **ROC-AUC:** 0.973318
 
