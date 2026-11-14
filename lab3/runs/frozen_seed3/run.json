@@ -1,0 +1,128 @@
+{
+    "mode": "frozen",
+    "seed": 3,
+    "commit": null,
+    "uncommitted_changes": null,
+    "split_sha256": "148dad92de9a18670c177df9f8757aa6519fb0ea6d74a8ba723cfc4453f0a1bc",
+    "python": "3.12.15",
+    "pytorch": "2.11.0+cu128",
+    "torchvision": "0.26.0+cu128",
+    "device": "cuda",
+    "device_name": "NVIDIA GeForce GTX 1660 SUPER",
+    "settings": {
+        "train_transform": "RandomResizedCrop(160, scale=(0.7,1.0)), RandomHorizontalFlip, ToTensor, Normalize(ImageNet)",
+        "eval_transform": "Resize((160,160)), ToTensor, Normalize(ImageNet)",
+        "mean": [
+            0.485,
+            0.456,
+            0.406
+        ],
+        "std": [
+            0.229,
+            0.224,
+            0.225
+        ],
+        "train_loader": {
+            "batch_size": 32,
+            "shuffle": true,
+            "drop_last": false,
+            "num_workers": 0
+        },
+        "eval_loader": {
+            "batch_size": 64,
+            "shuffle": false,
+            "num_workers": 0
+        },
+        "epochs": 8,
+        "loss": "CrossEntropyLoss(mean)",
+        "optimizer": "AdamW",
+        "weight_decay": 0.0001,
+        "optimizer_defaults": [
+            [
+                "lr",
+                0.003
+            ],
+            [
+                "betas",
+                [
+                    0.9,
+                    0.999
+                ]
+            ],
+            [
+                "eps",
+                1e-08
+            ],
+            [
+                "weight_decay",
+                0.0001
+            ],
+            [
+                "amsgrad",
+                false
+            ],
+            [
+                "maximize",
+                false
+            ],
+            [
+                "foreach",
+                null
+            ],
+            [
+                "capturable",
+                false
+            ],
+            [
+                "differentiable",
+                false
+            ],
+            [
+                "fused",
+                null
+            ],
+            [
+                "decoupled_weight_decay",
+                true
+            ]
+        ],
+        "param_groups": [
+            {
+                "n_params": 3078,
+                "lr": 0.003
+            }
+        ],
+        "bn_momentum": 0.1,
+        "bn_eps": 1e-05,
+        "weights": "IMAGENET1K_V1",
+        "eval_modules": [
+            "conv1",
+            "bn1",
+            "layer1",
+            "layer2",
+            "layer3",
+            "layer4"
+        ]
+    },
+    "train_loss": [
+        0.6879749782880147,
+        0.2912049635251363,
+        0.24735154310862223,
+        0.22488207240899405,
+        0.20704061150550843,
+        0.2066087689002355,
+        0.17613739470640818,
+        0.18958305339018502
+    ],
+    "val_macro_f1": [
+        0.8857886933783767,
+        0.88902870989329,
+        0.892482772255185,
+        0.8725848159612039,
+        0.8767280949099935,
+        0.8765676282323169,
+        0.8899791479492755,
+        0.8885955696095422
+    ],
+    "time_seconds": 37.50104546546936
+}

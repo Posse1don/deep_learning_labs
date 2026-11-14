@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+weights_local/
+seg_train/
+seg_test/
+seg_pred/
