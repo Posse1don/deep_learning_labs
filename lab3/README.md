@@ -275,7 +275,7 @@ SHA-256 `split.csv` (однаковий у всіх семи журналах і
 `running_mean` і `running_var` — це не параметри, а **буфери**. Вони оновлюються всередині прямого проходу BN-модуля в режимі `train()`, без участі autograd та оптимізатора:
 
 $$
-\text{running} \leftarrow (1-m)\,\text{running} + m\,\text{batch\_stat},\qquad m = 0.1
+\text{running} \leftarrow (1-m)\cdot\text{running} + m\cdot\text{batch stat},\qquad m = 0.1
 $$
 
 Прапорець `requires_grad` стосується лише градієнтів параметрів. Захистити буфери може тільки режим `eval()` для модуля.
